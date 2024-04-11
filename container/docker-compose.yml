@@ -5,7 +5,7 @@ services:
 
   # Postgres database
   db:
-    image: postgres:14.0
+    build: ./image/postgres/
     restart: always
     # set shared memory limit when using docker-compose
     shm_size: 128mb
@@ -17,7 +17,7 @@ services:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
     volumes:
-      - ./data:/var/lib/postgresql/data # 左側がホストのディレクトリ、右側がコンテナのディレクトリ
-      - ./initb.d:/docker-entrypoint-initdb.d # 初期化SQLなど
+      - ./postgres/data:/var/lib/postgresql/data # 左側がホストのディレクトリ、右側がコンテナのディレクトリ
+      - ./postgres/initdb:/docker-entrypoint-initdb.d # 初期化SQLなど
 
     
