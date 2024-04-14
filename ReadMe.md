@@ -9,11 +9,39 @@
 └── ReadMe.md
 ```
 
-## コマンド
+## 起動方法
 
-### サーバーサイド起動
+1. db起動
 ```
-docker-compose up -d ./backEnd/container/
+cd ./backEnd/container
+docker-compose up -d 
+```
 
+2. サーバー起動
+```
+cd ../
 
 ```
+
+3. クライアント起動
+```
+
+```
+
+## ローカル起動時
+
+### DB接続
+接続先DB
+- ``postgres``
+- ``develop``
+- ``localhost:5432``
+
+ユーザ名
+``user``
+
+パスワード
+``password``
+
+
+
+
